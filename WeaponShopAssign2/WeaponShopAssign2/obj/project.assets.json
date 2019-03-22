@@ -682,11 +682,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jeremy\\Desktop\\George Brown School\\Semester4\\Data Structures\\WeaponShopAssign2\\WeaponShopAssign2\\WeaponShopAssign2.csproj",
+      "projectUniqueName": "C:\\Users\\Jeremy\\Desktop\\George Brown School\\Semester4\\Data Structures\\WeaponShopAssignment\\WeaponShopAssign2\\WeaponShopAssign2\\WeaponShopAssign2.csproj",
       "projectName": "WeaponShopAssign2",
-      "projectPath": "C:\\Users\\Jeremy\\Desktop\\George Brown School\\Semester4\\Data Structures\\WeaponShopAssign2\\WeaponShopAssign2\\WeaponShopAssign2.csproj",
+      "projectPath": "C:\\Users\\Jeremy\\Desktop\\George Brown School\\Semester4\\Data Structures\\WeaponShopAssignment\\WeaponShopAssign2\\WeaponShopAssign2\\WeaponShopAssign2.csproj",
       "packagesPath": "C:\\Users\\Jeremy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jeremy\\Desktop\\George Brown School\\Semester4\\Data Structures\\WeaponShopAssign2\\WeaponShopAssign2\\obj\\",
+      "outputPath": "C:\\Users\\Jeremy\\Desktop\\George Brown School\\Semester4\\Data Structures\\WeaponShopAssignment\\WeaponShopAssign2\\WeaponShopAssign2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
