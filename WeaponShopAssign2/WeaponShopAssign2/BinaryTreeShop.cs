@@ -55,30 +55,32 @@ namespace WeaponShopAssign2
             else if (string.Compare(w, s.shopitem.weaponName) < 0) return SearchHelper(s.left, w);
             return null;
         }
-        public bool delete(string w)
+        public void delete(string w)
         {
-            ShopNode deleteItem = Search(w);
-            if (deleteItem == null) return false;
-            ShopNode current = root;
-            ShopNode previous = root;
-            while(current != deleteItem)
+            root = deleteWorker(w, root);
+        }
+        public ShopNode deleteWorker(string w, ShopNode current)
+        {
+            if (current == null) return current;
+            //if item to the right
+            if (string.Compare(w, current.shopitem.weaponName) > 0) current.right= deleteWorker(w, current.right);
+            //if item to the left
+            else if (string.Compare(w, current.shopitem.weaponName) < 0) current.left= deleteWorker(w, current.left);
+
+            else if(w == current.shopitem.weaponName)
             {
-                previous = current;
-                if (string.Compare(deleteItem.shopitem.weaponName, current.shopitem.weaponName) > 0) current = current.right;
-                else if (string.Compare(deleteItem.shopitem.weaponName, current.shopitem.weaponName) < 0) current = current.left; 
-            }
-            Console.WriteLine(previous.shopitem.weaponName);
-            Console.WriteLine(current.shopitem.weaponName);
-            return true;
-            /*if (string.Compare(current.shopitem.weaponName, current.right.shopitem.weaponName) > 0)
-            {
+                if (current.left == null) return current.right;
+                if (current.right == null) return current.left;
+
+                ShopNode successor = current.right;
+                while (current.left != null)
+                    successor = successor.left;
+                current.setNumStock(successor.getNumStock());
+                current.shopitem = successor.shopitem;
+                current.right = deleteWorker(current.shopitem.weaponName, current.right);
                 
             }
-            else if (string.Compare(current.shopitem.weaponName, current.left.shopitem.weaponName) < 0)
-            {
-
-            }*/
-
+            return current;
         }
         public void printShop()
         {

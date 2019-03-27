@@ -99,7 +99,7 @@ namespace WeaponShopAssign2
             name = name.ToLower();
             while (name != "end")
             {
-                Console.WriteLine("Enter the number of the item that will be in stock.");
+                Console.WriteLine("Enter the number of the item that will be added to the stock.");
                 input = Console.ReadLine();
                 //check for correct input
                 while(!int.TryParse(input, out numstock) || numstock < 1)
@@ -162,9 +162,32 @@ namespace WeaponShopAssign2
                 return;
             }
         }
-        static void deleteItem()
+        static void deleteItem(BinaryTreeShop bt)
         {
-            //tbd
+            Console.Clear();
+            string input = "";
+            while (input != "end")
+            {
+                Console.Clear();
+                Console.WriteLine("-----Delete Items from the Shop-----");
+                bt.printShop();
+                Console.WriteLine("Please enter the name of a weapon to delete, enter 'end' to quit.");
+                input = Console.ReadLine();
+                //all items stored in lowercase so searches done in lowercase
+                input = input.ToLower();
+                if (input == "end") break;
+                if (bt.Search(input) == null)
+                {
+                    Console.WriteLine("This item is not in the shop... press any key to continue.");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    bt.delete(input);
+                    Console.WriteLine("Item deleted. Press any key to continue.");
+                    Console.ReadKey();
+                }
+            }
         }
         static void buyItem(Player p, BinaryTreeShop bt)
         {
@@ -176,7 +199,7 @@ namespace WeaponShopAssign2
                 Console.WriteLine("-----Buy Item from the Shop-----");
                 bt.printShop();
                 p.printBackpack();
-                Console.WriteLine("Please enter the name of a weapon, enter 'end' to quit.");
+                Console.WriteLine("Please enter the name of a weapon to buy, enter 'end' to quit.");
                 input = Console.ReadLine();
                 //all items stored in lowercase so searches done in lowercase
                 input = input.ToLower();
@@ -257,6 +280,9 @@ namespace WeaponShopAssign2
                 {
                     case 1:
                         addItem(bts);
+                        break;
+                    case 2:
+                        deleteItem(bts);
                         break;
                     case 3:
                         buyItem(p, bts);
