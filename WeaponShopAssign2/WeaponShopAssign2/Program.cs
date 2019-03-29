@@ -227,8 +227,12 @@ namespace WeaponShopAssign2
                     }
                     else
                     {
-                        if (p.buy(purchasedItem.shopitem, numpurchased)) purchasedItem.setNumStock(purchasedItem.getNumStock() - numpurchased);
-                        /*
+                        if (p.buy(purchasedItem.shopitem, numpurchased))
+                        {
+                            purchasedItem.setNumStock(purchasedItem.getNumStock() - numpurchased);
+                            if (purchasedItem.getNumStock() == 0) bt.delete(purchasedItem.shopitem.weaponName);
+                        }
+                                /*
                          * removed code, keeping if something breaks
                          * if (!p.withdraw((purchasedItem.shopitem.cost) * numpurchased))
                         {
