@@ -85,6 +85,7 @@ namespace WeaponShopAssign2
         public void printShop()
         {
             Console.WriteLine("Shop Contents: ");
+            Console.WriteLine("Name\t\tDamage\tCost\tNumber in Stock");
             printHelper(root);
             Console.WriteLine("");
         }
@@ -93,7 +94,7 @@ namespace WeaponShopAssign2
             //prints nothing if shop is empty
             if (s == null) return;
             printHelper(s.left);
-            Console.WriteLine("Name: {0}    Damage: {1}    Cost: {2}   Number in Stock: {3}", s.shopitem.weaponName, s.shopitem.damage, s.shopitem.cost, s.getNumStock());
+            Console.WriteLine("{0}\t\t{1}\t{2}\t{3}", s.shopitem.weaponName, s.shopitem.damage, s.shopitem.cost, s.getNumStock());
             printHelper(s.right);
         }
     }

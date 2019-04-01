@@ -22,7 +22,7 @@ namespace WeaponShopAssign2
             //checks if player has enough money
             if (!withdraw((w.cost) * numpurchased))
             {
-                Console.WriteLine("You do not have enough money to purchase this item.");
+                Console.WriteLine("You do not have enough money to purchase this item!");
                 return false;
             }
             //checks if player has enough room in backpack

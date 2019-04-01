@@ -4,11 +4,9 @@ namespace WeaponShopAssign2
 {
     class Program
     {
-
-
+        /*
         public static void addWeapons(HashTable h)
         {
-            /*not used
             Console.WriteLine("***********WELCOME TO THE WEAPON ADDING MENU*********");
             string weaponName; int weaponRange; int weaponDamage; double weaponWeight; double weaponCost;
             Console.WriteLine("Please enter the NAME of the Weapon ('end' to quit):");
@@ -27,12 +25,11 @@ namespace WeaponShopAssign2
                 h.put(w);
                 Console.WriteLine("Please enter the NAME of another Weapon ('end' to quit):");
                 weaponName = Console.ReadLine();
-            }*/
+            }
         }
 
         public static void showRoom(HashTable ht, Player p)
         {
-            /*not used
             string choice;
             Console.WriteLine("WELCOME TO THE SHOWROOM!!!!");
             ht.printTable();
@@ -61,25 +58,27 @@ namespace WeaponShopAssign2
                 Console.WriteLine("Please select another weapon to buy('end' to quit):");
                 choice = Console.ReadLine();
             }
-            Console.WriteLine();*/
+            Console.WriteLine();
         }
+        */
+
         static int MainMenu()
         {
             Console.Clear();
-            Console.WriteLine("Welcome to the shop menu!");
-            Console.WriteLine("Please enter a choice.");
+            Console.WriteLine("Welcome to the game menu!");
             Console.WriteLine("1. Add items to the shop");
             Console.WriteLine("2. Delete items from the shop");
             Console.WriteLine("3. Buy from the shop");
             Console.WriteLine("4. View backpack");
             Console.WriteLine("5. View Player");
             Console.WriteLine("6. Exit");
+            Console.WriteLine("Please enter a choice:");
             int choice;
             string input = Console.ReadLine();
             //loops until valid choice entered
             while(!int.TryParse(input, out choice))
             {
-                Console.WriteLine("Please enter a choice.");
+                Console.WriteLine("Please enter a valid choice:");
                 input = Console.ReadLine();
             }
             return choice;
@@ -92,19 +91,19 @@ namespace WeaponShopAssign2
             int weaponrange, weapondamage, numstock;
             double weight, cost;
             b.printShop();
-            Console.WriteLine("Enter the name of an item to add to the shop, type 'end' to exit.");
-            Console.WriteLine("(if you enter the name of an existing weapon, it will increase the number in stock.)");
+            Console.WriteLine("Enter the name of an item to add to the shop (enter 'end' to exit):");
+            Console.WriteLine("(Iff you enter the name of an existing weapon, it will increase the number in stock.)");
             name = Console.ReadLine();
             //all items to be stored in lowercase
             name = name.ToLower();
             while (name != "end")
             {
-                Console.WriteLine("Enter the number of the item that will be added to the stock.");
+                Console.WriteLine("Enter the number of the item that will be added to the stock:");
                 input = Console.ReadLine();
                 //check for correct input
                 while(!int.TryParse(input, out numstock) || numstock < 1)
                 {
-                    Console.WriteLine("Please enter a valid number for the stock.");
+                    Console.WriteLine("Please enter a valid number for the stock:");
                     input = Console.ReadLine();
                 }
                 //if the item name is already in the shop
@@ -115,40 +114,40 @@ namespace WeaponShopAssign2
                     Console.Clear();
                     Console.WriteLine("Item added to shop!");
                     b.printShop();
-                    Console.WriteLine("Press any key to continue.");
+                    Console.WriteLine("Press any key to continue...");
                     Console.ReadKey();
                     return;
                 }
-                Console.WriteLine("Enter the number of weapon range.");
+                Console.WriteLine("Enter the range of the weapon:");
                 input = Console.ReadLine();
                 //check for correct input
                 while(!int.TryParse(input, out weaponrange) || weaponrange < 1)
                 {
-                    Console.WriteLine("Please enter valid integer for weapon range.");
+                    Console.WriteLine("Please enter a valid weapon range:");
                     input = Console.ReadLine();
                 }
-                Console.WriteLine("Enter the weight of the weapon in kilograms.");
+                Console.WriteLine("Enter the weight of the weapon in kilograms:");
                 input = Console.ReadLine();
                 //check for correct input
                 while(!double.TryParse(input, out weight) || weight < 1)
                 {
-                    Console.WriteLine("Please enter valid weight in kilograms.");
+                    Console.WriteLine("Please enter a valid weapon weight in kilograms:");
                     input = Console.ReadLine();
                 }
-                Console.WriteLine("Enter the cost of the weapon.");
+                Console.WriteLine("Enter the cost of the weapon:");
                 input = Console.ReadLine();
                 //check for correct input
                 while (!double.TryParse(input, out cost) || cost < 1)
                 {
-                    Console.WriteLine("Please enter a valid value for the cost.");
+                    Console.WriteLine("Please enter a valid weapon cost:");
                     input = Console.ReadLine();
                 }
-                Console.WriteLine("Enter the damage of the weapon.");
+                Console.WriteLine("Enter the damage of the weapon:");
                 input = Console.ReadLine();
                 //check for correct input
                 while(!int.TryParse(input, out weapondamage) || weapondamage < 1)
                 {
-                    Console.WriteLine("Please enter valid damage for the weapon.");
+                    Console.WriteLine("Please enter a valid weapon damage:");
                     input = Console.ReadLine();
                 }
                 Weapon newWeapon = new Weapon(name, weaponrange, weapondamage, weight, cost);
@@ -157,7 +156,7 @@ namespace WeaponShopAssign2
                 Console.Clear();
                 Console.WriteLine("Weapon added to the shop!");
                 b.printShop();
-                Console.WriteLine("Press any key to continue.");
+                Console.WriteLine("Press any key to continue...");
                 Console.ReadKey();
                 return;
             }
@@ -169,22 +168,22 @@ namespace WeaponShopAssign2
             while (input != "end")
             {
                 Console.Clear();
-                Console.WriteLine("-----Delete Items from the Shop-----");
+                Console.WriteLine("-----Delete Item from Shop-----");
                 bt.printShop();
-                Console.WriteLine("Please enter the name of a weapon to delete, enter 'end' to quit.");
+                Console.WriteLine("Please enter the name of a weapon to delete (enter 'end' to quit):");
                 input = Console.ReadLine();
                 //all items stored in lowercase so searches done in lowercase
                 input = input.ToLower();
                 if (input == "end") break;
                 if (bt.Search(input) == null)
                 {
-                    Console.WriteLine("This item is not in the shop... press any key to continue.");
+                    Console.WriteLine("This item is not in the shop. Press any key to continue...");
                     Console.ReadKey();
                 }
                 else
                 {
                     bt.delete(input);
-                    Console.WriteLine("Item deleted. Press any key to continue.");
+                    Console.WriteLine("Item deleted from shop! Press any key to continue...");
                     Console.ReadKey();
                 }
             }
@@ -196,34 +195,34 @@ namespace WeaponShopAssign2
             while(input != "end")
             {
                 Console.Clear();
-                Console.WriteLine("-----Buy Item from the Shop-----");
+                Console.WriteLine("-----Buy Item from Shop-----");
                 bt.printShop();
                 p.printBackpack();
-                Console.WriteLine("Please enter the name of a weapon to buy, enter 'end' to quit.");
+                Console.WriteLine("Please enter the name of a weapon to buy (enter 'end' to quit):");
                 input = Console.ReadLine();
                 //all items stored in lowercase so searches done in lowercase
                 input = input.ToLower();
                 if (input == "end") break;
                 if(bt.Search(input) == null)
                 {
-                    Console.WriteLine("This item is not in the shop... press any key to continue.");
+                    Console.WriteLine("This item is not in the shop. Press any key to continue...");
                     Console.ReadKey();
                 }
                 else
                 {
                     ShopNode purchasedItem = bt.Search(input);
                     int numpurchased;
-                    Console.WriteLine("Please enter the number of this item you wish to purchase.");
+                    Console.WriteLine("Please enter the number of " + input + " you wish to purchase:");
                     input = Console.ReadLine();
                     //check for correct input
                     while(!int.TryParse(input, out numpurchased) || numpurchased < 1)
                     {
-                        Console.WriteLine("Please enter a valid number for number of items.");
+                        Console.WriteLine("Please enter a valid number for number of items:");
                         input = Console.ReadLine();
                     }
                     if (purchasedItem.getNumStock() < numpurchased)
                     {
-                        Console.WriteLine("There isn't this many of this item in the shop.");
+                        Console.WriteLine("There isn't that many of this item in the shop...");
                     }
                     else
                     {
@@ -232,7 +231,7 @@ namespace WeaponShopAssign2
                             purchasedItem.setNumStock(purchasedItem.getNumStock() - numpurchased);
                             if (purchasedItem.getNumStock() == 0) bt.delete(purchasedItem.shopitem.weaponName);
                         }
-                                /*
+                        /*
                          * removed code, keeping if something breaks
                          * if (!p.withdraw((purchasedItem.shopitem.cost) * numpurchased))
                         {
@@ -244,7 +243,7 @@ namespace WeaponShopAssign2
                             purchasedItem.setNumStock(purchasedItem.getNumStock()-numpurchased);
                         }*/
                     }
-                    Console.WriteLine("Press any key to continue.");
+                    Console.WriteLine("Press any key to continue...");
                     Console.ReadKey();
                 }
             }
@@ -253,9 +252,9 @@ namespace WeaponShopAssign2
         static void viewBackpack(Player p)
         {
             Console.Clear();
-            Console.WriteLine("-----View Backpack");
+            Console.WriteLine("-----View Backpack-----");
             p.printBackpack();
-            Console.WriteLine("Press any key to continue.");
+            Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
         static void viewPlayer(Player p)
@@ -264,14 +263,14 @@ namespace WeaponShopAssign2
             Console.WriteLine("-----View Player-----");
             p.printCharacter();
             p.printBackpack();
-            Console.WriteLine("Press any key to continue.");
+            Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
         static void Main(string[] args)
         {
             //start
             string name;
-            Console.WriteLine("Please enter player name.");
+            Console.WriteLine("Please enter player name:");
             name = Console.ReadLine();
             BinaryTreeShop bts = new BinaryTreeShop();
             Player p = new Player(name, 500.50, 1000);
@@ -299,7 +298,7 @@ namespace WeaponShopAssign2
                         break;
                 }
             }
-            Console.WriteLine("Thank you for visiting the shop!");
+            Console.WriteLine("Thank you for playing - good-bye!");
             Console.ReadKey();
 
             //-----------END--------------
