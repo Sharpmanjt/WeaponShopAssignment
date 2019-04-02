@@ -73,7 +73,7 @@ namespace WeaponShopAssign2
                 if (current.right == null) return current.left;
 
                 ShopNode successor = current.right;
-                while (current.left != null)
+                while (successor.left != null)
                     successor = successor.left;
                 current.setNumStock(successor.getNumStock());
                 current.shopitem = successor.shopitem;
