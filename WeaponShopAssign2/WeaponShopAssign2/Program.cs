@@ -92,7 +92,7 @@ namespace WeaponShopAssign2
             double weight, cost;
             b.printShop();
             Console.WriteLine("Enter the name of an item to add to the shop (enter 'end' to exit):");
-            Console.WriteLine("(Iff you enter the name of an existing weapon, it will increase the number in stock.)");
+            Console.WriteLine("(If you enter the name of an existing weapon, it will increase the number in stock.)");
             name = Console.ReadLine();
             //all items to be stored in lowercase
             name = name.ToLower();

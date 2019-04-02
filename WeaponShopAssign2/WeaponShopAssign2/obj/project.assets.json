@@ -523,7 +523,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
-      "sha512": "CCf4NjmDOoise7FAij2VPuHIgKKsu696vkTwhOkPVQfLsTmB2WLFfQ4yeO5Udtk8FD636UBMx6Y9eovzJKT76A==",
+      "sha512": "5BdAWDgMNwf90L0J+C/eh6kfHDa37ViL1cBL1nv5zPA4TB2cGV51YiQyvzCEy9DBE0LwwMI4+PkUpIekKyocSA==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
@@ -676,28 +676,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/Vero/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Jeremy\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Vero/Documents/GitHub/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/WeaponShopAssign2.csproj",
+      "projectUniqueName": "C:\\Users\\Jeremy\\Desktop\\George Brown School\\Semester4\\Data Structures\\WeaponShopAssignment\\WeaponShopAssign2\\WeaponShopAssign2\\WeaponShopAssign2.csproj",
       "projectName": "WeaponShopAssign2",
-      "projectPath": "/Users/Vero/Documents/GitHub/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/WeaponShopAssign2.csproj",
-      "packagesPath": "/Users/Vero/.nuget/packages/",
-      "outputPath": "/Users/Vero/Documents/GitHub/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/obj",
+      "projectPath": "C:\\Users\\Jeremy\\Desktop\\George Brown School\\Semester4\\Data Structures\\WeaponShopAssignment\\WeaponShopAssign2\\WeaponShopAssign2\\WeaponShopAssign2.csproj",
+      "packagesPath": "C:\\Users\\Jeremy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jeremy\\Desktop\\George Brown School\\Semester4\\Data Structures\\WeaponShopAssignment\\WeaponShopAssign2\\WeaponShopAssign2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/Vero/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Jeremy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

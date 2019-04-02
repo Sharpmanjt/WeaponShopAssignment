@@ -20,17 +20,6 @@ C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShop
 C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.AssemblyInfo.cs
 C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.dll
 C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.pdb
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/bin/Debug/netcoreapp2.0/WeaponShopAssign2.deps.json
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/bin/Debug/netcoreapp2.0/WeaponShopAssign2.runtimeconfig.json
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/bin/Debug/netcoreapp2.0/WeaponShopAssign2.runtimeconfig.dev.json
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/bin/Debug/netcoreapp2.0/WeaponShopAssign2.dll
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/bin/Debug/netcoreapp2.0/WeaponShopAssign2.pdb
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.csprojAssemblyReference.cache
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.csproj.CoreCompileInputs.cache
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.AssemblyInfoInputs.cache
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.AssemblyInfo.cs
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.dll
-C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.pdb
 /Users/Vero/Documents/GitHub/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/bin/Debug/netcoreapp2.0/WeaponShopAssign2.deps.json
 /Users/Vero/Documents/GitHub/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/bin/Debug/netcoreapp2.0/WeaponShopAssign2.runtimeconfig.json
 /Users/Vero/Documents/GitHub/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/bin/Debug/netcoreapp2.0/WeaponShopAssign2.runtimeconfig.dev.json
@@ -42,3 +31,14 @@ C:/Users/Jeremy/Desktop/George Brown School/Semester4/Data Structures/WeaponShop
 /Users/Vero/Documents/GitHub/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.AssemblyInfo.cs
 /Users/Vero/Documents/GitHub/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.dll
 /Users/Vero/Documents/GitHub/WeaponShopAssignment/WeaponShopAssign2/WeaponShopAssign2/obj/Debug/netcoreapp2.0/WeaponShopAssign2.pdb
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\bin\Debug\netcoreapp2.0\WeaponShopAssign2.deps.json
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\bin\Debug\netcoreapp2.0\WeaponShopAssign2.runtimeconfig.json
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\bin\Debug\netcoreapp2.0\WeaponShopAssign2.runtimeconfig.dev.json
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\bin\Debug\netcoreapp2.0\WeaponShopAssign2.dll
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\bin\Debug\netcoreapp2.0\WeaponShopAssign2.pdb
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\obj\Debug\netcoreapp2.0\WeaponShopAssign2.csprojAssemblyReference.cache
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\obj\Debug\netcoreapp2.0\WeaponShopAssign2.csproj.CoreCompileInputs.cache
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\obj\Debug\netcoreapp2.0\WeaponShopAssign2.AssemblyInfoInputs.cache
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\obj\Debug\netcoreapp2.0\WeaponShopAssign2.AssemblyInfo.cs
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\obj\Debug\netcoreapp2.0\WeaponShopAssign2.dll
+C:\Users\Jeremy\Desktop\George Brown School\Semester4\Data Structures\WeaponShopAssignment\WeaponShopAssign2\WeaponShopAssign2\obj\Debug\netcoreapp2.0\WeaponShopAssign2.pdb
