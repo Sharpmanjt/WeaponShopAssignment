@@ -4,68 +4,10 @@ namespace WeaponShopAssign2
 {
     class Program
     {
-        /*
-        public static void addWeapons(HashTable h)
-        {
-            Console.WriteLine("***********WELCOME TO THE WEAPON ADDING MENU*********");
-            string weaponName; int weaponRange; int weaponDamage; double weaponWeight; double weaponCost;
-            Console.WriteLine("Please enter the NAME of the Weapon ('end' to quit):");
-            weaponName=Console.ReadLine();
-            while (weaponName.CompareTo("end") != 0)
-            {
-                Console.WriteLine("Please enter the Range of the Weapon (0-10):");
-                weaponRange= Convert.ToInt32(Console.ReadLine()); 
-                Console.WriteLine("Please enter the Damage of the Weapon:");
-                weaponDamage=Convert.ToInt32(Console.ReadLine()); 
-                Console.WriteLine("Please enter the Weight of the Weapon (in pounds):");
-                weaponWeight= Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Please enter the Cost of the Weapon:");
-                weaponCost=Convert.ToDouble(Console.ReadLine());
-                Weapon w = new Weapon(weaponName, weaponRange, weaponDamage, weaponWeight, weaponCost);
-                h.put(w);
-                Console.WriteLine("Please enter the NAME of another Weapon ('end' to quit):");
-                weaponName = Console.ReadLine();
-            }
-        }
-
-        public static void showRoom(HashTable ht, Player p)
-        {
-            string choice;
-            Console.WriteLine("WELCOME TO THE SHOWROOM!!!!");
-            ht.printTable();
-            Console.WriteLine(" You have "+p.money+" money.");
-            Console.WriteLine("Please select a weapon to buy('end' to quit):");
-            choice=Console.ReadLine();
-            while (choice.CompareTo("end") != 0 && !p.inventoryFull())
-            {
-                Weapon w = ht.get(choice);
-                if (w != null)
-                {
-                    if (w.cost > p.money)
-                    {
-                        Console.WriteLine("Insufficient funds to buy "+w.weaponName );
-                    }
-                    else
-                    {
-                        //p.bp.buy(w);
-                        p.withdraw(w.cost);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine(" ** "+choice+" not found!! **" );
-                }
-                Console.WriteLine("Please select another weapon to buy('end' to quit):");
-                choice = Console.ReadLine();
-            }
-            Console.WriteLine();
-        }
-        */
-
-        static int MainMenu()
+        static int MainMenu(Player p)
         {
             Console.Clear();
-            Console.WriteLine("Welcome to the game menu!");
+            Console.WriteLine("Welcome to the Dijkstra’s Arms, " + p.name + "!");
             Console.WriteLine("1. Add items to the shop");
             Console.WriteLine("2. Delete items from the shop");
             Console.WriteLine("3. Buy from the shop");
@@ -83,6 +25,7 @@ namespace WeaponShopAssign2
             }
             return choice;
         }
+
         static void addItem(BinaryTreeShop b)
         {
             Console.Clear();
@@ -161,6 +104,7 @@ namespace WeaponShopAssign2
                 return;
             }
         }
+
         static void deleteItem(BinaryTreeShop bt)
         {
             Console.Clear();
@@ -188,6 +132,7 @@ namespace WeaponShopAssign2
                 }
             }
         }
+
         static void buyItem(Player p, BinaryTreeShop bt)
         {
             Console.Clear();
@@ -231,24 +176,13 @@ namespace WeaponShopAssign2
                             purchasedItem.setNumStock(purchasedItem.getNumStock() - numpurchased);
                             if (purchasedItem.getNumStock() == 0) bt.delete(purchasedItem.shopitem.weaponName);
                         }
-                        /*
-                         * removed code, keeping if something breaks
-                         * if (!p.withdraw((purchasedItem.shopitem.cost) * numpurchased))
-                        {
-                            Console.WriteLine("You do not have enough money to purchase this item.");
-                        }
-                        else
-                        {
-                            p.buy(purchasedItem.shopitem, numpurchased);
-                            purchasedItem.setNumStock(purchasedItem.getNumStock()-numpurchased);
-                        }*/
                     }
                     Console.WriteLine("Press any key to continue...");
                     Console.ReadKey();
                 }
             }
-
         }
+
         static void viewBackpack(Player p)
         {
             Console.Clear();
@@ -257,6 +191,7 @@ namespace WeaponShopAssign2
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
+
         static void viewPlayer(Player p)
         {
             Console.Clear();
@@ -266,6 +201,7 @@ namespace WeaponShopAssign2
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
         }
+
         static void Main(string[] args)
         {
             //start
@@ -278,7 +214,7 @@ namespace WeaponShopAssign2
             //menu handling
             while(choice != 6)
             {
-                choice = MainMenu();
+                choice = MainMenu(p);
                 switch (choice)
                 {
                     case 1:
@@ -298,32 +234,8 @@ namespace WeaponShopAssign2
                         break;
                 }
             }
-            Console.WriteLine("Thank you for playing - good-bye!");
+            Console.WriteLine("Thank you for playing, " + p.name + " - good-bye!");
             Console.ReadKey();
-
-            //-----------END--------------
-            /*
-             * testing
-             * BinaryTreeShop Bt = new BinaryTreeShop();
-            Weapon w1 = new Weapon("Short Sword", 1, 10, 10, 50.0);
-            Weapon w2 = new Weapon("Long Sword", 1, 15, 10, 75.0);
-            Weapon w3 = new Weapon("Bow", 20, 8, 10, 40.0);
-            Weapon w4 = new Weapon("Zylo", 1, 3, 4, 15.0);
-            Bt.Insert(w1, 1);
-            Bt.Insert(w2, 3);
-            Bt.Insert(w3, 4);
-            Bt.Insert(w4, 2);
-            Bt.Insert(w1, 5);
-            Bt.printShop();
-            //B.delete("Zylo");
-            
-            b.addItem(w1, 1);
-            b.addItem(w2, 3);
-            b.addItem(w3, 4);
-            b.addItem(w4, 2);
-            b.addItem(w1, 5);
-            b.addItem(w4, 19);
-            b.printBackpack();*/
         }
     }
 }

@@ -18,14 +18,15 @@ namespace WeaponShopAssign2
             right = null;
             left = null;
         }
+
         public void setNumStock(int n)
         {
             numStock = n;
         }
+
         public int getNumStock()
         {
             return numStock;
         }
-
     }
 }

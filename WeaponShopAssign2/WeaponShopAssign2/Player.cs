@@ -31,6 +31,7 @@ namespace WeaponShopAssign2
             Console.WriteLine("Item purchased!");
             return bp.addItem(w, numpurchased);
         }
+
         public bool withdraw(double amt)
         {
             //subtracts money from player if possible
@@ -48,12 +49,14 @@ namespace WeaponShopAssign2
             }
             return true; 
         }
+
         public void printCharacter()
         {
             //prints player and backpack attributed
             Console.WriteLine("Name:"+name+"\nMoney:"+money);
             bp.printBackpack();
         }
+
         public void printBackpack()
         {
             bp.printBackpack();

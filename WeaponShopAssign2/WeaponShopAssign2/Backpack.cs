@@ -18,6 +18,7 @@ namespace WeaponShopAssign2
             presentWeight = 0;
             maxWeight = mweight;
         }
+
         public bool addItem(Weapon w, int numstock)
         {
             PackNode newNode = new PackNode(w, numstock);
@@ -29,13 +30,6 @@ namespace WeaponShopAssign2
                 return true;
             }
             PackNode current = head;
-            //if you already have some of that item in your bag and are buying additional copies
-            if (current.w == w)
-            {
-                current.stock += numstock;
-                presentWeight += (w.weight * numstock);
-                return true;
-            }
             //loops until you find the item or get to the end
             while (current.next != null)
             {
@@ -60,55 +54,6 @@ namespace WeaponShopAssign2
             presentWeight += (w.weight * numstock);
             return true;
         }
-        public void buy(Weapon w, int numstock)
-        {
-            /*
-             * 
-             * Not used, just kept in case something breaks
-            if(presentWeight + (w.weight*numstock) > maxWeight)
-            {
-                Console.WriteLine("Buying this item would exceed max weight.");
-                return false;
-            }
-            PackNode newNode = new PackNode(w, numstock);
-            if(head == null)
-            {
-                head = newNode;
-                presentWeight += w.weight * numstock;
-                Console.WriteLine("Item purchased!");
-                return true;
-            }
-            PackNode current = head;
-            if (current.w == w)
-            {
-                current.stock += numstock;
-                presentWeight += (w.weight*numstock);
-                Console.WriteLine("Item purchased!");
-                return true;
-            }
-            while (current.next != null)
-            {
-                if(current.w == w)
-                {
-                    current.stock += numstock;
-                    presentWeight += (w.weight * numstock);
-                    Console.WriteLine("Item purchased!");
-                    return true;
-                }
-                current = current.next;
-            }
-            if (current.w == w)
-            {
-                current.stock += numstock;
-                presentWeight += (w.weight * numstock);
-                Console.WriteLine("Item purchased!");
-                return true;
-            }
-            current.next = newNode;
-            presentWeight += (w.weight * numstock);
-            Console.WriteLine("Item purchased!");
-            return true;*/
-        }
         public void printBackpack()
         {
             PackNode current = head;
@@ -117,7 +62,7 @@ namespace WeaponShopAssign2
             //prints nothing if empty
             while (current != null)
             {
-                Console.WriteLine("Name: {0}    Damage: {1}   Number in Bag: {2}", current.w.weaponName, current.w.damage, current.stock);
+                Console.WriteLine("Name: {0} | Damage: {1} | Number in Bag: {2}", current.w.weaponName, current.w.damage, current.stock);
                 current = current.next;
             }
             Console.WriteLine("");
